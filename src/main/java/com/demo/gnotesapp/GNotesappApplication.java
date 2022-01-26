@@ -10,7 +10,7 @@ public class GNotesappApplication {
 
 		SpringApplication.run(GNotesappApplication.class, args);
 
-		System.out.println("Hello Change");
+		System.out.println("Hello");
 	}
 
 }
