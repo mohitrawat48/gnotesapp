@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'war'
 }
 
 group = 'com.demo'
@@ -37,4 +38,8 @@ test {
 	testLogging {
 		events "PASSED", "SKIPPED", "FAILED", "STANDARD_OUT", "STANDARD_ERROR"
 	}
+}
+
+bootWar {
+	archiveFileName = 'gwebapp.war'
 }
