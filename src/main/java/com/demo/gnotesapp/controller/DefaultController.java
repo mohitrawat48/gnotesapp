@@ -8,6 +8,6 @@ public class DefaultController {
 
     @GetMapping("/")
     public String defaultRoute(){
-        return "Hi, Welcome to G-Notes App";
+        return "Hi, Welcome to G-Notes App test1";
     }
 }
