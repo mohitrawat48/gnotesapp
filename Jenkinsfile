@@ -6,7 +6,7 @@ pipeline{
     
     stage("build"){
       when{
-        expresssion{
+        expression{
           BRANCH_NAME == 'dev'
         }
       }
