@@ -21,7 +21,7 @@ pipeline{
     
     stage("test"){
       steps{
-        echo "testing the Application..."
+        sh 'echo "testing the Application..."'
         sh 'ls'
       }
     }
