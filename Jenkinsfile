@@ -4,19 +4,19 @@ pipeline{
   
   stages{
     
-    stages("build"){
+    stage("build"){
       steps{
         echo "building the Application..."
       }
     }
     
-    stages("test"){
+    stage("test"){
       steps{
         echo "testing the Application..."
       }
     }
     
-    stages("deploy"){
+    stage("deploy"){
       steps{
         echo "Deploy the Application..."
       }
