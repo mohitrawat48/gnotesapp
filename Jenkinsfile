@@ -5,14 +5,18 @@ pipeline{
   stages{
     
     stage("build"){
-      when{
-        expression{
-          BRANCH_NAME == 'dev'
+      stage('Checkout') {
+            steps { //Checking out the repo
+              git branch: 'dev'
+            }
         }
-      }
-      steps{
-        sh './gradlew clean test --no-daemon'
-      }
+        stage('Unit & Integration Tests') {
+            steps {
+                script {
+                   sh './gradlew clean test --no-daemon' //run a gradle task
+                }
+            }
+        }
     }
     
     stage("test"){
